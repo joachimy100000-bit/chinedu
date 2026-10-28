@@ -1,0 +1,3 @@
+# Approval policy
+
+Only configured human producers approve exact script bytes and revision. Record approval in a scene approval issue, then merge the manifest on the default branch. A label or checkbox alone is insufficient. The approval issue must be authored by the named approver and contain the exact approval line documented in the runbook. The source commit must contain the exact script hash and be an ancestor of the selected commit. Changes require a new revision and approval; old outputs remain preserved and tasks become stale. Assets require human review. Nothing publishes or closes issues automatically.

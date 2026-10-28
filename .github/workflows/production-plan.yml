@@ -1,0 +1,29 @@
+name: Production plan
+on:
+  workflow_dispatch:
+    inputs:
+      episode:
+        description: Episode ID (GT-001)
+        required: true
+        type: string
+permissions:
+  contents: read
+  issues: read
+jobs:
+  plan:
+    if: github.ref_name == github.event.repository.default_branch
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - run: python3 scripts/plan_tasks.py --episode "$EPISODE"
+        env:
+          EPISODE: ${{ inputs.episode }}
+          GH_TOKEN: ${{ github.token }}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: production-plan-${{ github.run_id }}
+          path: reports/

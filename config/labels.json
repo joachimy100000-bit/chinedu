@@ -1,0 +1,62 @@
+[
+  {
+    "name": "type:episode",
+    "color": "5319e7"
+  },
+  {
+    "name": "type:approval",
+    "color": "5319e7"
+  },
+  {
+    "name": "type:narration",
+    "color": "5319e7"
+  },
+  {
+    "name": "type:flow",
+    "color": "5319e7"
+  },
+  {
+    "name": "type:thumbnail",
+    "color": "5319e7"
+  },
+  {
+    "name": "type:title",
+    "color": "5319e7"
+  },
+  {
+    "name": "type:description",
+    "color": "5319e7"
+  },
+  {
+    "name": "type:hashtags",
+    "color": "5319e7"
+  },
+  {
+    "name": "status:backlog",
+    "color": "d4c5f9"
+  },
+  {
+    "name": "status:ready",
+    "color": "d4c5f9"
+  },
+  {
+    "name": "status:in-progress",
+    "color": "d4c5f9"
+  },
+  {
+    "name": "status:review",
+    "color": "d4c5f9"
+  },
+  {
+    "name": "status:approved",
+    "color": "d4c5f9"
+  },
+  {
+    "name": "status:blocked",
+    "color": "d4c5f9"
+  },
+  {
+    "name": "status:stale",
+    "color": "d4c5f9"
+  }
+]
