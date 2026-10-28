@@ -3,7 +3,7 @@
   "producers": [
     "joachimy100000-bit"
   ],
-  "asset_storage": null,
+  "asset_storage": "Google Drive",
   "task_creation_enabled": false,
   "max_runtime_seconds": 1800
 }
