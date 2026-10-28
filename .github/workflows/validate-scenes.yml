@@ -1,0 +1,16 @@
+name: Validate scenes
+on:
+  pull_request:
+    paths: ['episodes/**', 'config/**', 'scripts/**', 'tests/**', '.github/**']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
+        with:
+          persist-credentials: false
+      - run: python3 scripts/validate_scenes.py
+      - run: python3 -m unittest discover -s tests -v
